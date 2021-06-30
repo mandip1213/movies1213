@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {MoviesProvider} from "./Components/moviescontext"
+import "./Components/css/navbar.css"
+import "./Components/css/movieslist.css"
+import "./Components/css/pagination.css"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MoviesProvider>
+         <App />
+         </MoviesProvider>
+ 
   </React.StrictMode>,
   document.getElementById('root')
 );

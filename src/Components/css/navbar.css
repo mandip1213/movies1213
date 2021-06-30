@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --border-radius-1:3px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0.25rem 6rem;;
+    background-color: #121212;
+    gap:0 1rem;
+}
+
+
+.logo-image {
+    /* transform: scale(0.7) */
+    width:120px;;
+}
+
+.navbar-items  {
+    list-style: none;
+    display: flex;
+    gap: 0 2rem;
+}
+
+.navbar-items  a {
+    color: rgba(128, 0, 128, 0.671);
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar-items  a:hover {
+    color: purple;
+}
+@media (max-width:550px){
+    .navbar{
+        padding:0.25rem 1rem;
+        font-size:1.125rem;
+    }
+    .navbar-items a {
+        font-size:1.5rem;
+    }
+}
+@media (max-width:850px){
+    .navbar{
+        padding:0.5rem 2rem;
+    }
+
+}
+
+/* homepage css */
+
+.search-container{
+    display:flex;
+    gap:0 1rem;
+    justify-content: center;
+    margin-top:0.5rem;
+}
+.search-container input{
+
+    padding:0.5rem 1rem;
+    border:var(--border-radius-1) solid green;
+    font-size:1.5rem;
+    border-radius:2rem; 
+    width:15rem;
+    /* text-align: center; */
+}
+.search-container input:focus{
+    border:var(--border-radius-1) solid rgb(190, 24, 190);
+    border-radius:2rem; 
+    outline:none;
+
+}
+.btn-primary{
+    padding:0.5rem 1rem;
+    border:var(--border-radius-1) solid green;
+    color:purple;
+    cursor:pointer;
+    border-radius:2000px;
+    font-size: 1.5rem;
+    transition:background-color linear 250ms,
+               color  linear 250ms;
+}
+.btn-primary:hover{
+    background-color: purple;
+    color:white;
+}
+
+.btn-secondary{
+    padding:0.5rem 1rem;
+    border:var(--border-radius-1) solid black;
+    color:rgba(0, 0, 0, 0.63);
+    cursor:pointer;
+    border-radius:2000px;
+    font-size: 1.5rem;
+    transition:background-color linear 250ms,
+               color  linear 250ms;
+}
+.btn-secondary:hover{
+    background-color: rgba(0, 0, 0, 0.589);
+    color:white;
+    cursor:not-allowed;
+    caret-color: red;
+}
+@media (max-width:500px){
+    .search-container{
+        justify-content: space-around;
+        padding:0 2rem;
+    }
+    .search-container input{
+        width:50vw;
+    }
+
+}
+

@@ -1,0 +1,20 @@
+ul.pagination{
+    list-style:none;
+    display:flex;
+    color:white;
+    justify-content: center;
+    margin-top:1rem;
+
+}
+.pagination-item{
+    border:2px solid white;
+    padding:2px 6px;
+    margin:0 0.5rem;
+    cursor:pointer;
+
+}
+.active.pagination-item{
+    background-color: white;
+    color:black;
+    border-color: grey;;
+}
