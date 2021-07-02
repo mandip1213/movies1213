@@ -1,30 +1,31 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useGlobalTmdbContext } from '../Tmdbcontext'
 import { Link } from "react-router-dom"
 import Pagination2 from '../Pagination2'
 import defaultposter from "../images/defaultposter.png"
-const Movieslist = () => {
-    const {searchresults: { currentPage, total_lists }, searchText } = useGlobalTmdbContext()
+
+
+const Toprated = () => {
+    const { top_rated: { currentPage, total_lists }, getMoviesByType } = useGlobalTmdbContext()
+    useEffect(() => {
+        getMoviesByType("top_rated")
+    }, [])
 
     const movieslisttoshow = total_lists.slice((currentPage - 1) * 10, currentPage * 10)
-    if(total_lists.length===0){
-        return(<><div className="sorry-message"> Sorry, There is no movie available with the name "<span className="title">{searchText}</span>"
-        <Link to="/" className="btn-primary" style={{display:"inline-block"}}>Back home</Link></div>
-        </>)
-    }
 
     return (<>
-        <Pagination2 moviesType="searchresults" />
-        <div className="search-movies">
+        <Pagination2 moviesType="top_rated" />
+        <div className="toprated-movies">
             <div className="movies-searches">
                 {movieslisttoshow.map(movieItem => {
-                    const { poster_path, id,  title, release_date } = movieItem
+                    const { poster_path, id, title, release_date } = movieItem
                     return (
                         <div key={id} className="movies-search">
                             <img src={poster_path === null ? defaultposter : `https://image.tmdb.org/t/p/w400${poster_path}`} className="search-image" alt="poster not available" />
                             <div className="search-title" >{title}</div>
+                            {/* <div className="search-type">Type: {media_type} </div> */}
                             <div className="search-year">Released :{release_date}</div>
-                            <Link to={`/movies/${id}`}className="btn-primary deatils">deatils</Link>
+                            <Link to={`/movies/${id}`} className="btn-primary deatils">deatils</Link>
 
                         </div>
                         )
@@ -41,4 +42,4 @@ const Movieslist = () => {
 
 }
 
-export default Movieslist
+export default Toprated

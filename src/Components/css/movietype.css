@@ -1,0 +1,29 @@
+.movies-by-type-btns{
+    display:flex;
+    justify-content: center;
+    margin-top:0.5rem;
+    gap: 0 2rem;
+    margin-bottom:0.5rem;
+    
+}
+
+.movies-by-type-btn{
+    padding:0.25rem 1rem;
+    color:rgba(255, 192, 203, 0.603);
+    font-size: 1.125rem;
+    transition: border-bottom linear 2s;
+}
+.movies-by-type-btn.active{
+    color:pink;
+    border-bottom:2px solid pink;
+}
+@media (max-width:500px){
+    .movies-by-type-btns{
+        justify-content: space-between;
+        gap:0.75rem;
+        padding:0 0.5rem;
+    }
+    .movies-by-type-btn{
+        padding:0.25rem 0;
+    }
+}

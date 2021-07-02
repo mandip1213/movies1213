@@ -1,16 +1,17 @@
 import React from 'react'
-import { useGlobalMovieContext } from '../moviescontext'
-import Movieslist from "./Movieslist"
+import { useGlobalTmdbContext } from '../Tmdbcontext'
 import {Link} from "react-router-dom"
-// useFetch('http://www.omdbapi.com/?apikey=e94218ee&page=2&s=batman')
 
 const Home = () => {
-    const { getMovies, searchText, updateSearchText } = useGlobalMovieContext()
+    const {getMoviesByType,updateSearchText,searchText,clearSearchResults}=useGlobalTmdbContext()
     return (<>
         <div className="search-container">
-            <input type="text" onChange={(e) => updateSearchText(e.target.value)} value={searchText} className="serach-text" />
-            <Link to="/movies"><button className="btn-primary"
-                onClick={() => {getMovies(searchText)}}>Search</button>
+            <input placeholder="search movies" type="text" onChange={(e) => updateSearchText(e.target.value)} value={searchText} className="serach-text" />
+
+            <Link to={`${searchText.length!==0?"/movies":"/"}`}><button className="btn-primary"
+                onClick={() => {
+                    clearSearchResults();
+                    (searchText.length!==0?getMoviesByType("searchresults"):alert("SearchBox Can't be empty"))}}>Search</button>
                 </Link>
         </div>
 

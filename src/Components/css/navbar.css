@@ -38,6 +38,9 @@
 .navbar-items  a:hover {
     color: purple;
 }
+.navbar-items  a.active{
+    color:purple;
+}
 @media (max-width:550px){
     .navbar{
         padding:0.25rem 1rem;
@@ -116,6 +119,5 @@
     .search-container input{
         width:50vw;
     }
-
 }
 

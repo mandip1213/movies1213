@@ -3,16 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {MoviesProvider} from "./Components/moviescontext"
+import {TmdbContextProvider} from "./Components/Tmdbcontext"
 import "./Components/css/navbar.css"
 import "./Components/css/movieslist.css"
 import "./Components/css/pagination.css"
+import "./Components/css/pagination2.css"
+import "./Components/css/movietype.css"
 
 ReactDOM.render(
   <React.StrictMode>
-    <MoviesProvider>
+    <TmdbContextProvider>
          <App />
-         </MoviesProvider>
+         </TmdbContextProvider>
  
   </React.StrictMode>,
   document.getElementById('root')

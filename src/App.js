@@ -5,32 +5,64 @@ import About from "./Components/Pages/About"
 import SingleMovie from "./Components/Pages/SingleMovie"
 import Error from "./Components/Pages/Error"
 import Movieslist from './Components/Pages/Movieslist';
-import {BrowserRouter as Router ,Route, Switch} from "react-router-dom"
+import Toprated from './Components/Pages/Toprated';
+import Popular from './Components/Pages/Popular';
+import Upcoming from './Components/Pages/Upcoming';
+import Trending from './Components/Trending';
+import Links from './Components/Links';
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
+
       <Switch>
         <Route exact path="/">
+          <Home />
+          <Links/>
+        <Trending/>
+        </Route>
+
+        <Route exact path="/about">
+          <About />
+        </Route>
+
+        <Route path="/toprated">
           <Home/>
+          <Links/>
+          <Toprated />
         </Route>
-        <Route path="/about">
-          <About/>
+
+        <Route path="/upcoming">
+          <Home/>
+          <Links/>
+          <Upcoming />
         </Route>
-        <Route path="/movie/:id">
-          <SingleMovie/>
+
+        <Route path="/popular">
+          <Home/>
+          <Links/>
+          <Popular />
         </Route>
+      
+        <Route path="/movies/:id">
+          <SingleMovie />
+        </Route>
+
         <Route path="/movies/">
-          <Home/>
-          <Movieslist/>
+          <Home />
+          <Movieslist />
         </Route>
+
         <Route path="*">
-          <Error/>
+          <Error />
         </Route>
+
       </Switch>
 
-    </Router>    
+    </Router>
   );
 }
 

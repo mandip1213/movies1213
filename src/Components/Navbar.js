@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import logo from "./images/logo.png"
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (<>
         <div className="navbar">
-            <Link to="/">
+            <NavLink to="/">
             <img className="logo-image" src={logo} alt="" />
-            </Link>
-            
+            </NavLink>
                 <ul className="navbar-items">
-                    <li className="navbar-item">
-                    <Link to="/">Home</Link>
+                    <li className="navbar-item" >
+                    <NavLink exact to="/" activeClassName="active">Home</NavLink>
                 </li>
                 <li className="navbar-item">
-                    <Link to="/about">About</Link>
+                    <NavLink to="/about" activeClassName="active">About</NavLink>
                 </li>
                 </ul>
 
