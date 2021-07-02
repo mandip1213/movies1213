@@ -11,7 +11,7 @@ import Upcoming from './Components/Pages/Upcoming';
 import Trending from './Components/Trending';
 import Links from './Components/Links';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { HashRouter as Router, Route, Switch } from "react-router-dom"
 
 function App() {
   return (
