@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/movies/static/css/main.2769fd74.chunk.css",
-    "main.js": "/movies/static/js/main.36bb5549.chunk.js",
-    "main.js.map": "/movies/static/js/main.36bb5549.chunk.js.map",
-    "runtime-main.js": "/movies/static/js/runtime-main.43aabdfa.js",
-    "runtime-main.js.map": "/movies/static/js/runtime-main.43aabdfa.js.map",
-    "static/js/2.b56e76be.chunk.js": "/movies/static/js/2.b56e76be.chunk.js",
-    "static/js/2.b56e76be.chunk.js.map": "/movies/static/js/2.b56e76be.chunk.js.map",
-    "static/js/3.265814fd.chunk.js": "/movies/static/js/3.265814fd.chunk.js",
-    "static/js/3.265814fd.chunk.js.map": "/movies/static/js/3.265814fd.chunk.js.map",
-    "index.html": "/movies/index.html",
-    "static/css/main.2769fd74.chunk.css.map": "/movies/static/css/main.2769fd74.chunk.css.map",
-    "static/js/2.b56e76be.chunk.js.LICENSE.txt": "/movies/static/js/2.b56e76be.chunk.js.LICENSE.txt",
-    "static/media/defaultposter.79451683.png": "/movies/static/media/defaultposter.79451683.png",
-    "static/media/logo.a48c7ae9.png": "/movies/static/media/logo.a48c7ae9.png"
+    "main.css": "/movies1213/static/css/main.2769fd74.chunk.css",
+    "main.js": "/movies1213/static/js/main.36bb5549.chunk.js",
+    "main.js.map": "/movies1213/static/js/main.36bb5549.chunk.js.map",
+    "runtime-main.js": "/movies1213/static/js/runtime-main.df678ac5.js",
+    "runtime-main.js.map": "/movies1213/static/js/runtime-main.df678ac5.js.map",
+    "static/js/2.b56e76be.chunk.js": "/movies1213/static/js/2.b56e76be.chunk.js",
+    "static/js/2.b56e76be.chunk.js.map": "/movies1213/static/js/2.b56e76be.chunk.js.map",
+    "static/js/3.265814fd.chunk.js": "/movies1213/static/js/3.265814fd.chunk.js",
+    "static/js/3.265814fd.chunk.js.map": "/movies1213/static/js/3.265814fd.chunk.js.map",
+    "index.html": "/movies1213/index.html",
+    "static/css/main.2769fd74.chunk.css.map": "/movies1213/static/css/main.2769fd74.chunk.css.map",
+    "static/js/2.b56e76be.chunk.js.LICENSE.txt": "/movies1213/static/js/2.b56e76be.chunk.js.LICENSE.txt",
+    "static/media/defaultposter.79451683.png": "/movies1213/static/media/defaultposter.79451683.png",
+    "static/media/logo.a48c7ae9.png": "/movies1213/static/media/logo.a48c7ae9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.43aabdfa.js",
+    "static/js/runtime-main.df678ac5.js",
     "static/js/2.b56e76be.chunk.js",
     "static/css/main.2769fd74.chunk.css",
     "static/js/main.36bb5549.chunk.js"
